@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Stocks Mood Check</title>
 </head>
-<body>
+<body id="wrapper" class="wrapper flex-center-col">
+	<main class="main flex-center-col">
+		<h1 class="head1">Stocks Mood Check</h1>
+		<input id="price-of-purchase" class="input" type="number" placeholder="What's the price of purchase?">
+		<p class="error-text" id="error-price-of-purchase"></p>
+
+		<input id="number-of-shares" class="input" type="number" placeholder="Number of shares purchased?">
+		<p class="error-text" id="error-number-of-shares"></p>
+
+		<input id="price-currently" class="input" type="number" placeholder="What's the price now?">
+		<p class="error-text" id="error-price-currently"></p>
+
+		<button id="submit-btn" class="btn-primary">Check Please!</button>
+
+		<h2 id="output" class="sub-head"></h2>
+	</main>
+
 <script src="./src/js/main.js"></script>
 </body>
 </html>
+

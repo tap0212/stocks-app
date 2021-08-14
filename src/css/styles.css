@@ -1,4 +1,143 @@
-body{
+:root {
+    --danger: #CA0B00;
+    --success: #1DB954;
+    --green: #415d43;
+    --accent: white;
+    --text: white;
+    --light: white;
+    --dark-bg-z: #1E2025;
+    --dark-bg-y: #22252A;
+    --font-size-head: 2.25rem;
+    --font-size-sub-ead: 1rem;
+}
+
+.wrapper{
     padding: 0;
     margin: 0;
+    background-color: var(--dark-bg-z);
+    font-family: 'Poppins', sans-serif;
+    width: calc(100vw - 4px);
+    height: calc(100vh - 6px);
 }
+.flex-center-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head1{
+    color: var(--text);
+    font-weight: 400;
+    font-size: var(--font-size-head);
+    text-align: center;
+}
+.sub-head{
+    color: var(--text);
+    font-weight: 400;
+    font-size: var(--font-size-sub-ead);
+    text-align: center;
+}
+.success{
+    border: 2px solid var(--success);
+}
+.failure{
+    border: 2px solid var(--danger);
+}
+.success-text{
+    color: var(--success);
+}
+.failure-text{
+    color: var(--danger);
+}
+.main{
+    width: 25%;
+    padding: 1rem;
+}
+.input{
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 0.25rem;
+    background-color: var(--dark-bg-y);
+    margin: 0.5rem 0;
+    border: none;
+    padding: 0 0.5rem;
+    color: var(--light) ;
+}
+
+.input:focus, .btn-primary:focus {
+    outline: none;
+    border:1px solid var(--green);
+    box-shadow: none;
+}
+.btn-primary{
+    width: 100%;
+    background-color: var(--green);
+    color: var(--light);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 2.675rem;
+    border-radius: 0.25rem;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    margin: 0.25rem 0;
+}
+.error-text{
+    color: var(--danger);
+    font-size: 0.675rem;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    align-self: baseline;
+}
+/* media queries */
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main{
+        width: 75%;
+    }
+}
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .main{
+        width: 75%;
+    }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .main{
+        width: 90%;
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .main{
+        width: 90%;
+    }
+  }
+  @media (max-width: 320px) {
+    .main{
+        width: 90%;
+    }
+  }
